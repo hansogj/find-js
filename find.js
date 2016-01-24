@@ -1,6 +1,5 @@
 require("array-from");
 
-
-module.exports.find = function(root, selector) {
+module.exports = function(root, selector) {
   return Array.from(root.querySelectorAll(selector))
 }
