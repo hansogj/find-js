@@ -1,6 +1,6 @@
 {
   "name": "find-js",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Returning an iterable array of the result of  querySelectorAll from root to selector ",
   "main": "dist/find.js",
   "repository": {
@@ -29,10 +29,10 @@
     "gulp-concat": "^2.6.0",
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7"
-  }, "scripts": {
+  },
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "node node_modules/gulp/bin/gulp.js",
-    "release" : "node node_modules/gulp/bin/gulp.js release"
-
+    "build": "node node_modules/gulp/bin/gulp.js",
+    "release": "node node_modules/gulp/bin/gulp.js release"
   }
 }
