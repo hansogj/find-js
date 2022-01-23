@@ -3,6 +3,10 @@
   "version": "2.0.0",
   "description": "Returning an iterable array of the result of  querySelectorAll from root to selector ",
   "main": "dist/find.js",
+  "types": "dist/find.d.ts",
+  "files": [
+    "dist/*"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/hansogj/find-js.git"
@@ -21,18 +25,21 @@
   },
   "homepage": "https://github.com/hansogj/find-js",
   "dependencies": {
-    "array-from": "^2.0.2"
+    "array-from": "^2.1.1"
   },
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-browserify": "^0.5.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-uglify": "^1.5.1",
-    "gulp-util": "^3.0.7"
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "@webpack-cli/generators": "^1.1.0",
+    "babel-loader": "^8.2.3",
+    "prettier": "^2.5.1",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node node_modules/gulp/bin/gulp.js",
-    "release": "node node_modules/gulp/bin/gulp.js release"
+    "prebuild": "rm -rf dist/",
+    "build": "webpack --mode=production --node-env=production",
+    "postbuild": "cp find.d.ts dist",
+    "prepack": "npm run build"
   }
 }

@@ -1,5 +1,6 @@
 require("array-from");
 
-module.exports = function(root, selector) {
-  return Array.from(root.querySelectorAll(selector))
-}
+const find = function(selector, root ) {
+    return Array.from((root||window.document).querySelectorAll(selector))
+  }
+module.exports = find;

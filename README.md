@@ -1,8 +1,21 @@
 # find-js
 
+Returns an iterable array of node-elements.
 
-### Usage
+## Usage
 
-__find("root", 'selector')__
+### JS
+```js
+find("root", 'selector')
+```
 
-returns an array of node-elements.
+
+### TS
+``` ts
+import find from 'find-js';
+
+console.log(find("h2", window.document.body))
+```
+
+
+
