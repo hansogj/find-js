@@ -3,8 +3,7 @@
  */
 
 
-const jest = require('@jest/globals').jest;
-const find = require('./find');
+import find from './find';
 
 const template = `
   <ul>

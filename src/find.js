@@ -1,4 +1,6 @@
-require("array-from");
-
-const find = (selector, root) => Array.from((root || window.document).querySelectorAll(selector))
-module.exports = find;
+"use strict";
+exports.__esModule = true;
+exports["default"] = (function (selector, root) {
+    if (root === void 0) { root = window.document; }
+    return Array.from(root.querySelectorAll(selector));
+});
