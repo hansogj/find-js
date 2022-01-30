@@ -1,6 +1,6 @@
 {
   "name": "find-js",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Returning an iterable array of the result of  querySelectorAll from root to selector ",
   "main": "dist/find.js",
   "types": "dist/find.d.ts",
@@ -30,16 +30,18 @@
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
-    "@webpack-cli/generators": "^1.1.0",
+    "@webpack-cli/generators": "^2.4.2",
     "babel-loader": "^8.2.3",
+    "jest": "^27.4.7",
     "prettier": "^2.5.1",
     "webpack": "^5.67.0",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.2"
   },
   "scripts": {
-    "prebuild": "rm -rf dist/",
+    "prebuild": "rm -rf dist/ && npm run test",
     "build": "webpack --mode=production --node-env=production",
-    "postbuild": "cp find.d.ts dist",
+    "test": "jest",
+    "postbuild": "cp src/find.d.ts dist",
     "prepack": "npm run build"
   }
 }

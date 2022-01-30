@@ -5,7 +5,7 @@ const path = require("path");
 const isProduction = process.env.NODE_ENV == "production";
 
 const config = {
-  entry: "./find.js",
+  entry: "./src/find.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: 'find.js',
