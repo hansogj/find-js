@@ -1,6 +1,6 @@
 {
   "name": "find-js",
-  "version": "4.0.1",
+  "version": "4.0.2-0",
   "description": "Returning an iterable array of the result of  querySelectorAll from root to selector ",
   "main": "dist/find.js",
   "types": "dist/find.d.ts",
