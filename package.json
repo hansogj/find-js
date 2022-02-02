@@ -46,7 +46,6 @@
     "prebuild": "rm -rf dist/ && npm run test",
     "build": "webpack --mode=production --node-env=production",
     "test": "jest",
-    "postbuild": "npx tsc --declaration src/find.ts && mv src/find.d.ts dist",
     "prepack": "npm run build"
   }
 }

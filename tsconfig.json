@@ -1,6 +1,9 @@
 {
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "declaration": true,
+        "outDir": "dist",
         "moduleResolution": "node",
         "noImplicitAny": true,
         "module": "ESNext",
@@ -12,10 +15,9 @@
             "es5",
             "es2019"
         ],
-        "allowJs": true
+        "allowJs": true,
     },
     "files": [
         "src/find.ts",
-        "src/find.spec.ts",
     ]
 }

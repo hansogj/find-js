@@ -12,6 +12,9 @@ const config = {
     libraryTarget: 'umd',
     library: 'find'
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
   devtool: "source-map",
   plugins: [ ],
   module: {
